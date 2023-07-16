@@ -1,0 +1,76 @@
+<Route path='/business'><News pageSize={5} country={"in"} category={"business"} /></Route>
+<Route path='/entertainment'><News pageSize={5} country={"in"} category={"entertainment"} /></Route>
+<Route path='/general'><News pageSize={5} country={"in"} category={"general"} /></Route>
+<Route path='/health'><News pageSize={5} country={"in"} category={"health"} /></Route>
+<Route path='/science'><News pageSize={5} country={"in"} category={"science"} /></Route>
+<Route path='/sports'><News pageSize={5} country={"in"} category={"sports"} /></Route>
+<Route path='/technology'><News pageSize={5} country={"in"} category={"technology"} /></Route>
+
+<Route path='/'><News pageSize={5} country={"in"} category={"general"} /></Route>
+
+
+
+import './App.css';
+import Navbar from './components/Navbar';
+import React, { Component } from 'react';
+import News from './components/News';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from 'react-router-dom';
+
+export default class App extends Component {
+  render() {
+    return (
+      <div>
+        <Router>
+          <Navbar />
+          <Routes>
+            <Route path='/business' element={<React.Fragment><News pageSize={5} country={"in"} category={"business"} /></React.Fragment>} />
+            <Route path='/entertainment' element={<React.Fragment><News pageSize={5} country={"in"} category={"entertainment"} /></React.Fragment>} />
+            <Route path='/general' element={<React.Fragment><News pageSize={5} country={"in"} category={"general"} /></React.Fragment>} />
+            <Route path='/health' element={<React.Fragment><News pageSize={5} country={"in"} category={"health"} /></React.Fragment>} />
+            <Route path='/science' element={<React.Fragment><News pageSize={5} country={"in"} category={"science"} /></React.Fragment>} />
+            <Route path='/sports' element={<React.Fragment><News pageSize={5} country={"in"} category={"sports"} /></React.Fragment>} />
+            <Route path='/technology' element={<React.Fragment><News pageSize={5} country={"in"} category={"technology"} /></React.Fragment>} />
+          </Routes>
+        </Router>
+      </div>
+    )
+  }
+}
+////////////////////////////
+//////////////////////////
+////////////////////////////
+import './App.css';
+import Navbar from './components/Navbar';
+import React, { Component } from 'react'
+import News from './components/News';
+import{
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link 
+} from 'react-router-dom'
+export default class App extends Component {
+  render() {
+    return (
+      <div>
+        <Router>
+        <Navbar/>
+        <Routes>
+          <Route path='/business'><News pageSize={5} country={"in"} category={"business"} /></Route>
+          <Route path='/entertainment'><News pageSize={5} country={"in"} category={"entertainment"} /></Route>
+          <Route path='/general'><News pageSize={5} country={"in"} category={"general"} /></Route>
+          <Route path='/health'><News pageSize={5} country={"in"} category={"health"} /></Route>
+          <Route path='/science'><News pageSize={5} country={"in"} category={"science"} /></Route>
+          <Route path='/sports'><News pageSize={5} country={"in"} category={"sports"} /></Route>
+          <Route path='/technology'><News pageSize={5} country={"in"} category={"technology"} /></Route>
+        </Routes>
+        </Router>
+      </div>
+    )
+  }
+}
